@@ -1,6 +1,7 @@
 ﻿@page "/fetchdata"
 @using SIG.Shared
-@inject HttpClient Http
+
+@inject IHttpClientFactory HttpClientFactory
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -8,7 +9,7 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (_forecasts == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -24,7 +25,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var forecast in _forecasts)
             {
                 <tr>
                     <td>@forecast.Date.ToShortDateString()</td>
@@ -37,12 +38,21 @@ else
     </table>
 }
 
+@if (!string.IsNullOrWhiteSpace(_error)) {
+    <b>@_error</b>
+}
+
 @code {
-    private WeatherForecast[]? forecasts;
+    private HttpClient _httpClient;
+    private WeatherForecast[]? _forecasts;
+    private string _error = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("/api/WeatherForecast") ?? new WeatherForecast[] { };
+        _httpClient = HttpClientFactory.CreateClient("SIG.API");
+
+        
+        _forecasts = await _httpClient.GetFromJsonAsync<WeatherForecast[]>("/api/WeatherForecast") ?? new WeatherForecast[] { };
     }
     
 }
