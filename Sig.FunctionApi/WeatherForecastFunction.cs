@@ -4,14 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-using SIG.Shared;
+using Sig.FunctionApi;
 using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using SIG.Shared;
 
-namespace SIG.API
+namespace Sig.FunctionApi
 {
     public class WeatherForecastFunction
     {
