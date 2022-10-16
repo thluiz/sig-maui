@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{8FA065F7-D
 		.github\workflows\azure-static-web-apps-thankful-meadow-08d4da910.yml = .github\workflows\azure-static-web-apps-thankful-meadow-08d4da910.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIG.API", "SIG.API\SIG.API.csproj", "{A67A7D1D-9ED5-4D4A-BB46-C7B073B0617E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIG.API", "SIG.API\SIG.API.csproj", "{A67A7D1D-9ED5-4D4A-BB46-C7B073B0617E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIG.Shared", "SIG.Shared\SIG.Shared.csproj", "{4E41E8DB-8AD3-4153-AE9A-056CD84D2210}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIG.Shared", "SIG.Shared\SIG.Shared.csproj", "{4E41E8DB-8AD3-4153-AE9A-056CD84D2210}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
