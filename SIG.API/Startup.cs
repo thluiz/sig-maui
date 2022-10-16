@@ -34,8 +34,9 @@ namespace SIG.API
             // Create a new IConfigurationRoot and add our configuration along with Azure's original configuration 
             Configuration = new ConfigurationBuilder()
                 .SetBasePath(currentDirectory)
+                .AddEnvironmentVariables()
                 .AddConfiguration(configuration) // Add the original function configuration 
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .Build();
 
             // Replace the Azure Function configuration with our new one
