@@ -3,8 +3,6 @@
 // be reflected on the first load after each change).
 self.addEventListener('fetch', () => {
 
-    if (event.request.url.indexOf('.auth/') !== -1) {
-        return false;
-    }
+
 
 });
