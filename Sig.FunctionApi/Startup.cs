@@ -16,11 +16,11 @@ namespace Sig.FunctionApi
     {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-            //builder.Services.AddOpenIDConnect(config =>
-            //{
-            //    config.SetTokenValidation(TokenValidationParametersHelpers.Default("sig-function-api.myvtmi.im", "https://dev-regf5o5f.us.auth0.com/"));
-            //    config.SetIssuerBaseUrlConfiguration("https://dev-regf5o5f.us.auth0.com/");
-            //});
+            builder.Services.AddOpenIDConnect(config =>
+            {
+                config.SetTokenValidation(TokenValidationParametersHelpers.Default("sig-function-api.myvtmi.im", "https://dev-regf5o5f.us.auth0.com/"));
+                config.SetIssuerBaseUrlConfiguration("https://dev-regf5o5f.us.auth0.com/");
+            });
         }
     }
 }
