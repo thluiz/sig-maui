@@ -1,4 +1,4 @@
-name: Build and deploy .NET Core application to Function App myvtmiim-functions
+name: Deploy to myvtmiim-functions
 on:
   push:
     branches:

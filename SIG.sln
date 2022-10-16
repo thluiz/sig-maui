@@ -9,6 +9,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".git", ".git", "{8FA065F7-DC08-4520-8C65-5D1D56540D2C}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\azure-static-web-apps-thankful-meadow-08d4da910.yml = .github\workflows\azure-static-web-apps-thankful-meadow-08d4da910.yml
+		.github\workflows\myvtmiim-functions.yml = .github\workflows\myvtmiim-functions.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIG.API", "SIG.API\SIG.API.csproj", "{A67A7D1D-9ED5-4D4A-BB46-C7B073B0617E}"
